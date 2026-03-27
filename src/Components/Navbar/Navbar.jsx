@@ -7,7 +7,7 @@ const Navbar = ({categoryTrees}) => {
      const categoryBtn = category.categories
     return (
         <div className='container mx-auto bg-[#15803d]'>
-            <div className="dropdown">
+            <div className="dropdown text-white">
                 <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
                 </div>
@@ -21,7 +21,6 @@ const Navbar = ({categoryTrees}) => {
           </li>
         ))}
       </ul>
-
             </div>
             <div className=' text-white px-5 pb-6 flex flex-col md:flex-row justify-between items-center gap-5 '>
 
@@ -45,8 +44,8 @@ const Navbar = ({categoryTrees}) => {
                         </svg>
                         <input type="search" required placeholder="Search" />
                     </label>
-                    <div className="block lg:hidden">
-                        <div className="flex items-center gap-1 relative">
+                    <div className="">
+                        <div className="  md:hidden flex items-center gap-1 relative">
                             <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold rounded-full px-1">
                                 0
                             </span>

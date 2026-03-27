@@ -5,7 +5,7 @@ import RightImg from '../../assets/hero-leaf2.png'
 const Banner = () => {
     return (
         <div className='container mx-auto'>
-            <div className='bg-[#cff0dc] flex justify-between items-center py-5 md:py-0 '>
+            <div className='bg-[#cff0dc] flex justify-between items-center py-5 lg:py-0 '>
                 <div className='hidden md:block'>
                     <img src={LeftImg} alt="" />
                 </div>
