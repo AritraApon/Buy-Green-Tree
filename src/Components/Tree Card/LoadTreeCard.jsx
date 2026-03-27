@@ -1,6 +1,8 @@
 import React, { use } from 'react';
 import TreeCards from './TreeCards';
 
+
+
 const LoadTreeCard = ({ allTreeData }) => {
     const allTreeDatePromise = use(allTreeData)
     const plantsCardsData = allTreeDatePromise.plants;
@@ -17,6 +19,8 @@ const LoadTreeCard = ({ allTreeData }) => {
                     </TreeCards>)
                 }
             </div>
+
+
         </div>
     );
 };

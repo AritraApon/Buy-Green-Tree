@@ -1,11 +1,17 @@
 import React, { useState } from 'react';
 import { FaShoppingCart } from 'react-icons/fa';
 import { TbCoinTakaFilled } from 'react-icons/tb';
+import { toast } from 'react-toastify';
+
+
 
 const TreeCards = ({ plants }) => {
-     const [addCart , setAddCart] = useState(true)
+     const [addCart , setAddCart] = useState(true);
+
      const handleAddCart=()=>{
         setAddCart(!addCart)
+        toast.success(`Successfully add ${plants.name} to cart 🛒`)
+
      }
 
     return (
