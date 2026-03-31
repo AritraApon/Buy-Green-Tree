@@ -7,6 +7,7 @@ import LoadTreeCard from './Components/Tree Card/LoadTreeCard'
 import { ToastContainer } from 'react-toastify'
 import ComCart from './Components/Campaigin/ComCart'
 import Footer from './Components/Footer/Footer'
+import Impact from './Components/ImpactCarts/Impact'
 
 
 const fetchCategories = () => {
@@ -67,6 +68,7 @@ function App() {
 
 
        <ComCart/>
+       <Impact/>
        <Footer/>
       <ToastContainer />
     </>
