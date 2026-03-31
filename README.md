@@ -1,12 +1,37 @@
-# React + Vite
+# 🌱 Buy Green Tree
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple eco-friendly web project focused on promoting tree planting and green environment awareness. Users can explore and support planting trees through a clean and user-friendly interface.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* 🌿 Clean and simple UI design
+* 🌳 Tree plantation awareness section
+* 📱 Responsive layout
+* ⚡ Beginner-friendly project
 
-## Expanding the ESLint configuration
+## 🛠️ Technologies Used
+* React
+* HTML
+* CSS
+* JavaScript
+* Tailwind CSS
+* DaisyUI
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🎯 Purpose
+
+This project is created to practice frontend development and promote environmental awareness by encouraging people to plant more trees.
+
+## 📷 Live Demo
+
+Add your live link here
+
+## 📁 Repository
+
+https://github.com/AritraApon/Buy-Green-Tree
+
+## 👨‍💻 Author
+
+Aritro Mazumdar Apon
+Frontend Web Developer Learner
+
+📧 [aritromazumdar8@gmail.com](mailto:aritromazumdar8@gmail.com)
