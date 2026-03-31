@@ -17,7 +17,7 @@ const TreeCards = ({ plants }) => {
     return (
         <div>
             <div className="card bg-base-100  shadow-xl hover:scale-105">
-                <figure className="w-full h-30  md:h-60 overflow-hidden">
+                <figure className="w-full h-30  md:h-50 overflow-hidden">
                     <img
                         src={plants.image}
                         alt="Shoes" className='w-50 h-50 md:w-full md:h-full object-cover' />

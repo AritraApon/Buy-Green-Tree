@@ -1,10 +1,11 @@
 import React, { use } from 'react';
-import { FaCartPlus } from 'react-icons/fa';
+import { FaCartPlus, FaSearch } from 'react-icons/fa';
 import TreeButton from '../CatagoryButton/TreeButton';
+import { CgPlayButton } from 'react-icons/cg';
 
-const Navbar = ({categoryTrees}) => {
-    const category = use(categoryTrees);
-     const categoryBtn = category.categories
+const Navbar = ({ allCategories, handleFilter, selectedCategories }) => {
+    // const category = use(categoryTrees);
+    //  const categoryBtn = category.categories
     return (
         <div className='container mx-auto bg-[#15803d]'>
             <div className="dropdown text-white">
@@ -12,15 +13,30 @@ const Navbar = ({categoryTrees}) => {
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
                 </div>
                 <ul
-        tabIndex={-1}
-        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
-      >
-        {categoryBtn.map((cat) => (
-          <li key={cat.category_id}>
-            <TreeButton btn={cat} />
-          </li>
-        ))}
-      </ul>
+                    tabIndex={-1}
+                    className={`menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow ${selectedCategories === null
+                        ? "text-red-700 border-b-2 border-red-700"
+                        : "text-green-700"
+                        }    `}
+                >
+                    <li>
+                        <button
+                            onClick={() => handleFilter("All")}
+                            className={`${selectedCategories === null
+                                ? "text-red-700 border-b-2 border-red-700"
+                                : "text-green-700"
+                                } flex items-center font-bold text-md`}
+                        >
+                            All Trees <CgPlayButton />
+                        </button>
+                    </li>
+
+                    {allCategories.map((cat) => (
+                        <li key={cat.category_id}>
+                            <TreeButton btn={cat} handleFilter={handleFilter} />
+                        </li>
+                    ))}
+                </ul>
             </div>
             <div className=' text-white px-5 pb-6 flex flex-col md:flex-row justify-between items-center gap-5 '>
 
@@ -28,8 +44,8 @@ const Navbar = ({categoryTrees}) => {
                 <div>
                     <h1 className='font-bold text-3xl '>Green Trees</h1>
                 </div>
-                <div className='flex items-center gap-6'>
-                    <label className="input text-black w-2xs">
+                <div className='flex items-center gap-2'>
+                    <label className="input text-black md:w-2xs">
                         <svg className="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                             <g
                                 strokeLinejoin="round"
@@ -44,6 +60,7 @@ const Navbar = ({categoryTrees}) => {
                         </svg>
                         <input type="search" required placeholder="Search" />
                     </label>
+                    <div><button className='btn'> <FaSearch />  </button></div>
                     <div className="">
                         <div className="  md:hidden flex items-center gap-1 relative">
                             <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold rounded-full px-1">
